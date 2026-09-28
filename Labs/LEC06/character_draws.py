@@ -5,6 +5,21 @@ from pico2d import *
 open_canvas(800, 600)
 character = load_image('character.png')
 
+def draw_top():
+    print('TOP')
+    pass
+
+def draw_right():
+    print('RIGHT')
+    pass
+
+def draw_bottom():
+    print('BOTTOM')
+    pass
+
+def draw_left():
+    print('LEFT')
+    pass
 
 def move_circle():
     for degree in range(360): 
@@ -12,14 +27,17 @@ def move_circle():
         x = 400 + 200 * math.cos(theta)
         y = 300 + 200 * math.sin(theta)
 
-        #캐릭터 이미지 표시
-        clear_canvas()
-        character.draw(x, y)
-        update_canvas()
-        delay(0.01)
+    clear_canvas()
+    character.draw(x, y)      
+    update_canvas()
+    delay(0.01)
 
 def move_rectangle():
     print('RECTANGLE')
+    draw_top()
+    draw_right()
+    draw_bottom()
+    draw_left()
     pass
 
 def move_triangle():
