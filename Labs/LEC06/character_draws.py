@@ -35,8 +35,9 @@ def move_circle():
         draw_character(x,y)
 
 def draw_A():
-    print('draw A')
-    pass
+    for x in range(400, 700, 5):
+        y = (-4 / 3) * (x - 400) + 500
+        draw_character(x, y)
 
 def draw_B():
     print('draw B')
@@ -54,8 +55,8 @@ def move_rectangle():
 
 def move_triangle():
     draw_A()
-    draw_B()
-    draw_C()
+    # draw_B()
+    # draw_C()
 
 
 
