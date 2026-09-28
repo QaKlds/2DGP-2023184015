@@ -40,7 +40,9 @@ def draw_A():
         draw_character(x, y)
 
 def draw_B():
-    print('draw B')
+    for x in range(700, 100, -5):
+        y = 100
+        draw_character(x, y)
     pass
 
 def draw_C():
