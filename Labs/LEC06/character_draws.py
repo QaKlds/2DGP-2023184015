@@ -34,17 +34,17 @@ def move_circle(): #원 그리기
         y = 300 + 200 * math.sin(theta)
         draw_character(x,y)
 
-def draw_A():
+def draw_A(): #삼각형 첫번째 변 그리기
     for x in range(400, 700, 5):
         y = (-4 / 3) * (x - 400) + 500
         draw_character(x, y)
 
-def draw_B():
+def draw_B(): #삼각형 두번째 변 그리기
     for x in range(700, 100, -5):
         y = 100
         draw_character(x, y)
 
-def draw_C():
+def draw_C(): #삼각형 세번째 변 그리기
     for x in range(100, 400, 5):
         y = (4 / 3) * (x - 100) + 100
         draw_character(x, y)
