@@ -42,6 +42,10 @@ def draw_B():
     print('draw B')
     pass
 
+def draw_C():
+    print('draw C')
+    pass
+
 def move_rectangle():
     draw_top()
     draw_right()
@@ -51,7 +55,7 @@ def move_rectangle():
 def move_triangle():
     draw_A()
     draw_B()
-
+    draw_C()
 
 
 
