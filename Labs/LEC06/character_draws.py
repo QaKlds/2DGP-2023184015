@@ -46,7 +46,9 @@ def draw_B():
     pass
 
 def draw_C():
-    print('draw C')
+    for x in range(100, 400, 5):
+        y = (4 / 3) * (x - 100) + 100
+        draw_character(x, y)
     pass
 
 def move_rectangle():
