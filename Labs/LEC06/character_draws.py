@@ -27,7 +27,7 @@ def draw_left(): #사각형 왼쪽부분 그리기
     for y in range(50, 550, 5):
         draw_character(50, y)
 
-def move_circle():
+def move_circle(): #원 그리기
     for degree in range(360): 
         theta = math.radians(degree)
         x = 400 + 200 * math.cos(theta)
