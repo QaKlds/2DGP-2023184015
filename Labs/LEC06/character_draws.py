@@ -6,7 +6,11 @@ open_canvas(800, 600)
 character = load_image('character.png')
 
 def draw_top():
-    print('TOP')
+    for x in range(50, 750, 5):
+        clear_canvas()
+        character.draw(x, 550)
+        update_canvas()
+        delay(0.01)
     pass
 
 def draw_right():
