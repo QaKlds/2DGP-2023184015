@@ -49,20 +49,20 @@ def draw_C(): #삼각형 세번째 변 그리기
         y = (4 / 3) * (x - 100) + 100
         draw_character(x, y)
 
-def move_rectangle():
+def move_rectangle(): #사각형 그리기
     draw_top()
     draw_right()
     draw_bottom()
     draw_left()
 
-def move_triangle():
+def move_triangle(): #삼각형 그리기
     draw_A()
     draw_B()
     draw_C()
 
 
 
-while True:
+while True: #메인
     move_circle()
     move_rectangle()
     move_triangle()
