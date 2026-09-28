@@ -34,18 +34,19 @@ def move_circle():
         y = 300 + 200 * math.sin(theta)
         draw_character(x,y)
 
+def draw_A():
+    print('draw A')
+    pass
+
 
 def move_rectangle():
-    print('RECTANGLE')
     draw_top()
     draw_right()
     draw_bottom()
     draw_left()
-    pass
 
 def move_triangle():
-    print('TRIANGLE')
-    pass
+    draw_A()
 
 
 
