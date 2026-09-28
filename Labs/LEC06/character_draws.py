@@ -5,7 +5,7 @@ from pico2d import *
 open_canvas(800, 600)
 character = load_image('character.png')
 
-def draw_character(x, y):
+def draw_character(x, y): #캐릭터 그리기 함수
     clear_canvas()
     character.draw(x, y)
     update_canvas()
