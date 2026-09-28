@@ -56,7 +56,7 @@ def move_rectangle():
     draw_left()
 
 def move_triangle():
-    # draw_A()
+    draw_A()
     draw_B()
     # draw_C()
 
