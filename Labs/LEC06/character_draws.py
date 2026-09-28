@@ -7,7 +7,7 @@ character = load_image('character.png')
 
 def draw_character(x, y):
     clear_canvas()
-    character.draw(x, 550)
+    character.draw(x, y)
     update_canvas()
     delay(0.01)
 
@@ -17,7 +17,8 @@ def draw_top():
     pass
 
 def draw_right():
-    print('RIGHT')
+    for y in range(550, 50, -5):
+        draw_character(750, y)
     pass
 
 def draw_bottom():
@@ -39,7 +40,7 @@ def move_circle():
 
 def move_rectangle():
     print('RECTANGLE')
-    draw_top()
+    # draw_top()
     draw_right()
     draw_bottom()
     draw_left()
