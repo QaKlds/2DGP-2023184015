@@ -11,19 +11,19 @@ def draw_character(x, y): #캐릭터 그리기 함수
     update_canvas()
     delay(0.01)
 
-def draw_top():
+def draw_top(): #사각형 윗부분 그리기
     for x in range(50, 750, 5):
         draw_character(x, 550)
 
-def draw_right():
+def draw_right(): #사각형 오른쪽부분그리기
     for y in range(550, 50, -5):
         draw_character(750, y)
 
-def draw_bottom():
+def draw_bottom(): #사각형 아랫부분 그리기
     for x in range(750, 50, -5):
         draw_character(x, 50)
 
-def draw_left():
+def draw_left(): #사각형 왼쪽부분 그리기
     for y in range(50, 550, 5):
         draw_character(50, y)
 
