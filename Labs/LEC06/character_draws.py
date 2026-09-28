@@ -48,7 +48,6 @@ def draw_C():
     for x in range(100, 400, 5):
         y = (4 / 3) * (x - 100) + 100
         draw_character(x, y)
-    pass
 
 def move_rectangle():
     draw_top()
