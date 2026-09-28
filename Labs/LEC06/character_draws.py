@@ -38,6 +38,9 @@ def draw_A():
     print('draw A')
     pass
 
+def draw_B():
+    print('draw B')
+    pass
 
 def move_rectangle():
     draw_top()
@@ -47,12 +50,14 @@ def move_rectangle():
 
 def move_triangle():
     draw_A()
+    draw_B()
+
 
 
 
 while True:
-    move_circle()
-    move_rectangle()
+    # move_circle()
+    # move_rectangle()
     move_triangle()
     pass
 
