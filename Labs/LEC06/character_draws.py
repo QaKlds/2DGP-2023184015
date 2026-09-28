@@ -14,21 +14,18 @@ def draw_character(x, y):
 def draw_top():
     for x in range(50, 750, 5):
         draw_character(x, 550)
-    pass
 
 def draw_right():
     for y in range(550, 50, -5):
         draw_character(750, y)
-    pass
 
 def draw_bottom():
     for x in range(750, 50, -5):
         draw_character(x, 50)
-    pass
 
 def draw_left():
-    print('LEFT')
-    pass
+    for y in range(50, 550, 5):
+        draw_character(50, y)
 
 def move_circle():
     for degree in range(360): 
@@ -43,7 +40,7 @@ def move_rectangle():
     print('RECTANGLE')
     # draw_top()
     # draw_right()
-    draw_bottom()
+    # draw_bottom()
     draw_left()
     pass
 
