@@ -78,6 +78,26 @@ frame_time = 0.1
 pause_time = 1.0
 
 
+# 애니메이션이 계속 돌고 있는지 나타내는 변수
+running = True
+
+
+# 키보드/마우스 이벤트를 처리하는 함수
+# 이 함수가 없으면 이벤트가 계속 쌓여서 창이 멈추고 응답하지 않게 된다
+def handle_events():
+    global running
+
+    for event in get_events():
+        # 창을 닫는 이벤트
+        if event.type == SDL_QUIT:
+            running = False
+        # 키를 누른 이벤트
+        elif event.type == SDL_KEYDOWN:
+            # Esc 키 또는 Q 키를 누르면 종료한다
+            if event.key == SDLK_ESCAPE or event.key == SDLK_q:
+                running = False
+
+
 # 전달받은 frames 리스트를 반복 재생하는 함수
 def play_animation(frames):
     # 현재 보여줄 프레임의 인덱스
@@ -108,15 +128,26 @@ def play_animation(frames):
             # 화면에 실제로 반영한다
             update_canvas()
 
+            # 키보드/마우스 이벤트를 처리한다 (이게 없으면 창이 멈춘다)
+            handle_events()
+
+            # 종료 신호가 들어오면 더 이상 그리지 않고 빠져나간다
+            if not running:
+                return
+
             # 다음 프레임으로 이동한다 (마지막 프레임 다음에는 처음으로 돌아간다)
             frame = (frame + 1) % len(frames)
             # 한 프레임을 보여줄 시간만큼 기다린다
             delay(frame_time)
 
+        # 종료 신호가 들어오면 반복을 중단한다
+        if not running:
+            return
+
 
 # 아래 4가지 애니메이션을 순서대로 무한 반복해서 재생한다
-# (창을 닫거나 Esc 키를 누르면 종료된다)
-while True:
+# (Esc 키 또는 Q 키를 누르거나 창을 닫으면 종료된다)
+while running:
     # 등장 애니메이션 재생
     play_animation(appear_frame)
     # 등장 애니메이션 끝나고 잠시 멈춘다
@@ -136,3 +167,6 @@ while True:
     play_animation(sliding_frame)
     # 슬라이딩 애니메이션 끝나고 잠시 멈춘다
     delay(pause_time)
+
+# 반복이 끝나면 캔버스(화면)를 닫는다
+close_canvas()
