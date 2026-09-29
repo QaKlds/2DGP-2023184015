@@ -4,34 +4,60 @@ open_canvas()
 
 character = load_image('megaman.png')
 
-frame_lefts = [225, 395, 437, 479]
-frame_top = 28
-frame_width = 41
-frame_height = 40
-frame_bottom = character.h - frame_top - frame_height
+row1_frames = [
+    (225, 28, 41, 40),
+    (395, 28, 41, 40),
+    (437, 28, 41, 40),
+    (479, 28, 41, 40)
+]
+
+row2_frames = [
+    (34, 91, 40, 41),
+    (81, 94, 38, 38),
+    (122, 96, 38, 36),
+    (165, 92, 32, 40),
+    (201, 82, 36, 51),
+    (240, 72, 31, 62),
+    (277, 90, 42, 41),
+    (320, 90, 46, 41),
+    (369, 90, 41, 41),
+    (413, 90, 41, 41),
+    (457, 90, 41, 41)
+]
 
 scale = 3
 center_x = 400
-center_y = 300
-
+baseline = 240
 repeat_count = 5
-frame = 0
+frame_time = 0.1
+pause_time = 1.0
 
-for repeat in range(repeat_count):
-    for step in range(len(frame_lefts)):
-        clear_canvas()
 
-        character.clip_draw(
-            frame_lefts[frame], frame_bottom, frame_width, frame_height,
-            center_x, center_y,
-            frame_width * scale, frame_height * scale
-        )
+def play_animation(frames):
+    frame = 0
 
-        update_canvas()
+    for repeat in range(repeat_count):
+        for step in range(len(frames)):
+            left, top, width, height = frames[frame]
 
-        frame = (frame + 1) % len(frame_lefts)
-        delay(0.1)
+            clear_canvas()
 
-delay(1.0)
+            character.clip_draw(
+                left, character.h - top - height, width, height,
+                center_x, baseline + (height * scale) // 2,
+                width * scale, height * scale
+            )
+
+            update_canvas()
+
+            frame = (frame + 1) % len(frames)
+            delay(frame_time)
+
+
+play_animation(row1_frames)
+delay(pause_time)
+
+play_animation(row2_frames)
+delay(pause_time)
 
 close_canvas()
