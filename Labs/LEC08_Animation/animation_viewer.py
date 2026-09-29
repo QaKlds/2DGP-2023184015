@@ -7,6 +7,9 @@ open_canvas()
 # 스프라이트시트 이미지(megaman.png)를 불러온다
 character = load_image('megaman.png')
 
+# 배경 이미지(megaman_background.png)를 불러온다
+background = load_image('megaman_background.png')
+
 # 등장 애니메이션: 13프레임
 # 각 프레임은 (left, top, width, height) = (왼쪽 x, 위쪽 y, 가로길이, 세로길이)
 # 좌표는 이미지 기준이며 왼쪽 위가 (0, 0)이다
@@ -114,6 +117,13 @@ def play_animation(frames):
 
             # 화면을 지운다 (잔상을 없애기 위해 매 프레임마다 지운다)
             clear_canvas()
+
+            # 배경 이미지를 화면 가득 채우도록 확대해서 먼저 그린다
+            # draw(x, y, w, h) 의 x, y 는 그릴 영역의 중심 좌표라는 점에 주의한다
+            background.draw(
+                get_canvas_width() // 2, get_canvas_height() // 2,
+                get_canvas_width(), get_canvas_height()
+            )
 
             # 스프라이트시트에서 프레임 부분만 잘라서 그린다
             character.clip_draw(
