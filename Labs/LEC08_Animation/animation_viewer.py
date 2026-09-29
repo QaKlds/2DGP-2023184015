@@ -20,7 +20,7 @@ appear_frame = [
     (479, 0, 42, 70)
 ]
 
-jump_frame = [
+victory_frame = [
     (34, 91, 40, 41),
     (81, 94, 38, 38),
     (122, 96, 38, 36),
@@ -78,7 +78,7 @@ def play_animation(frames):
 play_animation(appear_frame)
 delay(pause_time)
 
-play_animation(jump_frame)
+play_animation(victory_frame)
 delay(pause_time)
 
 play_animation(run_frame)
@@ -87,4 +87,4 @@ delay(pause_time)
 close_canvas()
 
 
-# x좌표는 (75~119), (119~155), (155~186), (186~221), (221~268), (268~300), (300~341), (341~394), (394~438) y좌표는 모든 프레임 동일 (200~245)    
+# x좌표??(75~119), (119~155), (155~186), (186~221), (221~268), (268~300), (300~341), (341~394), (394~438) y좌표??모든 ?�레???�일 (200~245)    
