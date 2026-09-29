@@ -77,24 +77,6 @@ def play_animation(frames):
             delay(frame_time)
 
 
-def play_sliding():
-    for repeat in range(repeat_count):
-        for step in range(len(sliding_frame)):
-            left, top, width, height = sliding_frame[step]
-
-            clear_canvas()
-
-            character.clip_draw(
-                left, character.h - top - height, width, height,
-                center_x, baseline + (height * scale) // 2,
-                width * scale, height * scale
-            )
-
-            update_canvas()
-
-            delay(frame_time)
-
-
 play_animation(appear_frame)
 delay(pause_time)
 
@@ -103,6 +85,9 @@ delay(pause_time)
 
 play_animation(run_frame)
 delay(pause_time)
+
+# play_animation(sliding_frame)
+# delay(pause_time)
 
 close_canvas()
 
