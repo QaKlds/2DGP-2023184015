@@ -46,7 +46,13 @@ run_frame = [
     (394, 200, 44, 45)
 ]
 
-sliding_frame = []
+sliding_frame = [
+    (18, 299, 60, 40),
+    (78, 299, 54, 40),
+    (132, 299, 50, 40),
+    (182, 299, 39, 40),
+    (221, 299, 37, 40)
+]
 
 scale = 3
 center_x = 400
@@ -77,19 +83,18 @@ def play_animation(frames):
             delay(frame_time)
 
 
-play_animation(appear_frame)
-delay(pause_time)
-
-play_animation(victory_frame)
-delay(pause_time)
-
-play_animation(run_frame)
-delay(pause_time)
-
-# play_animation(sliding_frame)
+# play_animation(appear_frame)
 # delay(pause_time)
+
+# play_animation(victory_frame)
+# delay(pause_time)
+
+# play_animation(run_frame)
+# delay(pause_time)
+
+play_animation(sliding_frame)
+delay(pause_time)
 
 close_canvas()
 
-
-# x좌표는 (75~119), (119~155), (155~186), (186~221), (221~268), (268~300), (300~341), (341~394), (394~438) y좌표는 모든 프레임 동일 (200~245)    
+# y좌표는 (299~339)로 모든 프레임 동일, x좌표는 (18~78), (78~132), (132~182), (182~221) ,(221~258) 
