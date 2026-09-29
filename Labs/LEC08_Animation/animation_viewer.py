@@ -114,25 +114,25 @@ def play_animation(frames):
             delay(frame_time)
 
 
-# 등장 애니메이션 재생
-play_animation(appear_frame)
-# 등장 애니메이션 끝나고 잠시 멈춘다
-delay(pause_time)
+# 아래 4가지 애니메이션을 순서대로 무한 반복해서 재생한다
+# (창을 닫거나 Esc 키를 누르면 종료된다)
+while True:
+    # 등장 애니메이션 재생
+    play_animation(appear_frame)
+    # 등장 애니메이션 끝나고 잠시 멈춘다
+    delay(pause_time)
 
-# 승리 포즈 애니메이션 재생
-play_animation(victory_frame)
-# 승리 포즈 애니메이션 끝나고 잠시 멈춘다
-delay(pause_time)
+    # 승리 포즈 애니메이션 재생
+    play_animation(victory_frame)
+    # 승리 포즈 애니메이션 끝나고 잠시 멈춘다
+    delay(pause_time)
 
-# 달리기 애니메이션 재생
-play_animation(run_frame)
-# 달리기 애니메이션 끝나고 잠시 멈춘다
-delay(pause_time)
+    # 달리기 애니메이션 재생
+    play_animation(run_frame)
+    # 달리기 애니메이션 끝나고 잠시 멈춘다
+    delay(pause_time)
 
-# 슬라이딩 애니메이션 재생
-play_animation(sliding_frame)
-# 슬라이딩 애니메이션 끝나고 잠시 멈춘다
-delay(pause_time)
-
-# 캔버스(화면)를 닫는다
-close_canvas()
+    # 슬라이딩 애니메이션 재생
+    play_animation(sliding_frame)
+    # 슬라이딩 애니메이션 끝나고 잠시 멈춘다
+    delay(pause_time)
