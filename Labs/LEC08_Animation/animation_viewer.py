@@ -83,14 +83,14 @@ def play_animation(frames):
             delay(frame_time)
 
 
-# play_animation(appear_frame)
-# delay(pause_time)
+play_animation(appear_frame)
+delay(pause_time)
 
-# play_animation(victory_frame)
-# delay(pause_time)
+play_animation(victory_frame)
+delay(pause_time)
 
-# play_animation(run_frame)
-# delay(pause_time)
+play_animation(run_frame)
+delay(pause_time)
 
 play_animation(sliding_frame)
 delay(pause_time)
