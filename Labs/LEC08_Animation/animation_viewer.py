@@ -25,6 +25,18 @@ row2_frames = [
     (457, 90, 41, 41)
 ]
 
+row4_frames = [
+    (75, 204, 42, 40),
+    (122, 207, 32, 37),
+    (155, 209, 30, 35),
+    (187, 207, 32, 37),
+    (223, 206, 44, 35),
+    (269, 209, 42, 35),
+    (311, 205, 42, 38),
+    (353, 203, 39, 36),
+    (396, 203, 39, 36)
+]
+
 scale = 3
 center_x = 400
 baseline = 240
@@ -58,6 +70,9 @@ play_animation(row1_frames)
 delay(pause_time)
 
 play_animation(row2_frames)
+delay(pause_time)
+
+play_animation(row4_frames)
 delay(pause_time)
 
 close_canvas()
