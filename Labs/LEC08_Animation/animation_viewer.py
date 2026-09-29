@@ -5,10 +5,19 @@ open_canvas()
 character = load_image('megaman.png')
 
 row1_frames = [
-    (225, 28, 41, 40),
-    (395, 28, 41, 40),
-    (437, 28, 41, 40),
-    (479, 28, 41, 40)
+    (12, 0, 20, 70),
+    (33, 0, 29, 70),
+    (63, 0, 46, 70),
+    (110, 0, 38, 70),
+    (148, 0, 36, 70),
+    (184, 0, 39, 70),
+    (224, 0, 43, 70),
+    (268, 0, 42, 70),
+    (310, 0, 43, 70),
+    (353, 0, 42, 70),
+    (395, 0, 42, 70),
+    (437, 0, 42, 70),
+    (479, 0, 42, 70)
 ]
 
 row2_frames = [
@@ -66,13 +75,16 @@ def play_animation(frames):
             delay(frame_time)
 
 
-# play_animation(row1_frames)
-# delay(pause_time)
+play_animation(row1_frames)
+delay(pause_time)
 
 # play_animation(row2_frames)
 # delay(pause_time)
 
-play_animation(row4_frames)
-delay(pause_time)
+# play_animation(row4_frames)
+# delay(pause_time)
 
 close_canvas()
+
+
+# { (12,70), (32,0) },  {(33,70), (62,0)}, {(63,70), (109, 0)}, {(110,70), (148, 0)}, {(148, 70), (184, 0)}, {(184,70), (223, 0)}, {(224,70), (267, 0)}, {(268,70),(310,0)}, {(310, 70),(353, 0)}, {(353, 70), (395, 0)}, {(395. 70), (437,0)}, {(437, 70), (479, 0)}, {(479, 70), (521, 0)}    
