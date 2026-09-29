@@ -66,11 +66,11 @@ def play_animation(frames):
             delay(frame_time)
 
 
-play_animation(row1_frames)
-delay(pause_time)
+# play_animation(row1_frames)
+# delay(pause_time)
 
-play_animation(row2_frames)
-delay(pause_time)
+# play_animation(row2_frames)
+# delay(pause_time)
 
 play_animation(row4_frames)
 delay(pause_time)
